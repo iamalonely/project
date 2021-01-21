@@ -1,0 +1,40 @@
+
+body{
+    font: 14px/1 "PingFangSC-Regular",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;line-height:1.41
+}
+
+img {
+    vertical-align: top;
+}
+
+p, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+em{
+  font-style: normal;
+}
+select{
+  outline: none;
+}
+
+.el-tabs{
+  // 去除tab的focus选中效果
+  .el-tabs__item:focus.is-active.is-focus:not(:active) {
+    box-shadow: none;
+  }
+}

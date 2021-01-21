@@ -1,0 +1,202 @@
+@import './var.scss';
+
+html{background-color:$--white-color}
+.clo0,a.clo0{color:#000}
+.clo3,a.clo3{color:#333}
+.clo6,a.clo6{color:#666}
+.clo9,a.clo9{color:#999}
+.cloc,a.cloc{color:#ccc}
+.clof,a.clof,a:visited.clof{color:#FFF}
+.red,a.red{color:$--error-color}
+.primary{color:$--primary-color}
+.green,a.green{color:$--success-color}
+.blue,a.blue{color:$--blue-color}
+.orange,a.orange{color:$--warn-color}
+.white {
+  color: #fff;
+}
+.font12 { font-size: 12px; }
+.font13 { font-size: 13px; }
+.font14 { font-size: 14px; }
+.font15 { font-size: 15px; }
+.font16 { font-size: 16px; }
+.font17 { font-size: 17px; }
+.font18 { font-size: 18px; }
+.font19 { font-size: 19px; }
+.font20 { font-size: 20px; }
+.font22 { font-size: 22px; }
+.font32 { font-size: 32px; }
+.fontb { font-weight: bold }
+.fontn { font-weight: normal }
+
+.fontyahei { font-family: "Microsoft Yahei",微软雅黑 }
+
+.left { float: left }
+.right { float: right }
+.center { text-align: center }
+.middle { vertical-align: middle;animation: none !important; }
+.tleft { text-align: left }
+.tright { text-align: right }
+.ovh { overflow: hidden }
+.ova { overflow: auto }
+.ove {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden
+}
+.hide { display: none; }
+
+.pointer,button,input[type=button],input[type=submit],input[type=file] {
+	cursor: pointer
+}
+
+.mauto { margin: auto; }
+.ptb10{ padding:10px 0; }
+.margin0 { margin: 0; }
+.mlr3 { margin: 0 3px; }
+.mlr5 { margin: 0 5px; }
+.ml5 { margin-left: 5px; }
+.mr5 { margin-right: 5px; }
+.mb5 { margin-bottom: 5px; }
+.ml10 { margin-left: 10px; }
+.mr10 { margin-right: 10px; }
+.mt10 { margin-top: 10px; }
+.mb10 { margin-bottom: 10px; }
+.mb15 { margin-bottom: 15px; }
+.mt15 { margin-top: 15px; }
+.ml20 { margin-left: 20px; }
+.mr20 { margin-right: 20px; }
+.mt20 { margin-top: 20px; }
+.mb20 { margin-bottom: 20px; }
+.ml35 { margin-left: 35px; }
+.mt40 { margin-top: 40px; }
+.ml40 { margin-left: 40px; }
+.mr40 { margin-right: 40px; }
+.ml60 { margin-left: 60px; }
+.ml80 { margin-left: 60px; }
+.plr10 { padding: 0 10px; }
+.cmlr3 a,.cmlr3 input,.cmlr3 button { margin: 0 3px; }
+.wth40 { width:  40px; }
+.wth80 { width:  80px; }
+.wth200 { width:  200px; }
+.wth300 { width:  300px; }
+.ablock {
+	display: block;
+	width: 100%;
+	height: 100%
+}
+
+.iblock {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1
+}
+
+.relative { position: relative }
+.absolute { position: absolute }
+
+.border_none { border: none!important; }
+
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+
+.transition5 { transition: all .5s; }
+
+
+.bgc-primary{ background-color: $--primary-color; }
+.bgc-error{ background-color: $--error-color; }
+.bgc-success{ background-color: $--success-color; }
+.bgc-warn{ background-color: $--warn-color; }
+.bgc-cancel{ background-color: $--cancel-color; }
+.bgc-white { background-color: $--white-color; }
+.bgc-disabled { background-color: $--disabled-color !important; }
+
+.clo-primary{ color: $--primary-color; }
+.clo-error{ color: $--error-color; }
+.clo-success{ color: $--success-color; }
+.clo-warn{ color: $--warn-color; }
+.clo-cancel{ color: $--cancel-color; }
+
+.bold {
+  font-weight: bold;
+}
+
+.sty-normal {
+  font-style: normal;
+}
+.bold-normal {
+  font-weight: normal;
+}
+.btn{
+  padding: 0px 0.427rem;
+  height: 0.72rem;
+  font-size: 0.347rem;
+  border-radius: 4px;
+  outline: 0;
+  box-sizing: border-box;
+  border: 1px solid #26a2ff;
+  background-color: transparent;
+  color: #26a2ff;
+}
+
+.btnRed{
+  border: 1px solid #ec5b5b;
+  color: #ec5b5b;
+}
+
+.border-no-color {
+  border:transparent 1px solid;
+}
+.border-blue {
+  border: 1px solid $--blue-color;
+}
+.border-red {
+  border: 1px solid $--error-color;
+}
+.border-yellow {
+  border: 1px solid $--warn-color;
+}
+.border-bottom{
+  border-bottom: 1px #ccc solid;
+}
+.border-green {
+  border: 1px solid $--success-color;
+}
+.flex{
+	display:flex;
+	align-items:center;
+	justify-content: flex-start;
+}
+
+
+// 滚动条美化
+.beautiful-scorll-bar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: rgb(221, 228, 244);
+}
+
+.beautiful-scorll-bar::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb(221, 228, 244);
+}
+
+.beautiful-scorll-bar::-webkit-scrollbar-thumb {
+  background-color: rgb(193, 193, 193);
+  border-radius: 4px;
+}
+
+.el-button--mini{
+  .iconfont{
+    font-size: 12px;
+  }
+}
