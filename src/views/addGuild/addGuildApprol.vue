@@ -29,11 +29,14 @@ export default {
               prop: 'name',
               label: '姓名',
               editable: true,
-              editCellFramwork: 'Input'
+              editCellFramwork: (h, { column, $index }) => {
+                console.log(column, $index)
+                return h('el-input', { props: { value: 'dd' } })
+              }
           },
           {
               prop: 'name1',
-              label: '姓名',
+              label: '姓1名',
               editable: true,
               editCellFramwork: 'Number'
           },

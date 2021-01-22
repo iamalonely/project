@@ -8,19 +8,30 @@
     :align="align">
       <template slot-scope="scope"  >
         <template v-if="!slotName">
-          <component :is="Components[componentFrame]" v-if="editable" v-model="scope.row[prop]" @change="change($event, scope)" @EventHandler="EventHandler" v-bind="{...cellParasm, prop}" />
+          <template v-if="editable">
+            <render :renderFnc="renderFnc($createElement, scope)" v-if="renderFnc" />
+            <component :is="Components[componentFrame]"
+              v-else
+              v-model="scope.row[prop]" @change="change($event, scope)"
+              @EventHandler="EventHandler" v-bind="{...cellParasm, prop}" />
+          </template>
           <p v-else>{{formatter ? formatter(scope.row) : scope.row[prop]}}</p>
         </template>
         <slot v-bind="scope" v-else></slot>
+        
       </template>
-      {{cellParasm}}
     </el-table-column>
 </template>
 
 <script>
 import * as Components from '@/components/BaseComponents'
+import render from './render'
+import Render from './render.vue'
 export default {
   name: 'Column',
+  components: {
+    render
+  },
   props: {
     label: {
       type: String
@@ -58,7 +69,9 @@ export default {
   data () {
     return {
       Components,
-      value: ''
+      value: '',
+      isRedner: false,
+      renderFnc: null
     }
   },
   computed: {
@@ -66,7 +79,15 @@ export default {
       console.log(this.editCellFramwork)
       let componentFrame
       if ( typeof(this.editCellFramwork) === 'string') {
+        this.isRedner = false
         componentFrame = this.editCellFramwork
+      }
+      if (typeof(this.editCellFramwork) === 'function') {
+        this.isRedner = true
+        console.log(this.$scopedSlots.default, this.$createElement, 'scopedSlots')
+        this.renderFnc = (h, scope) => {
+          return this.editCellFramwork(h, scope)
+        }
       }
       console.log(componentFrame)
       return componentFrame

@@ -24,8 +24,8 @@ export default {
 
 <style scoped>
 .app-main {
-  /*84 = navbar + tags-view = 50 +34 */
-  height: calc(100vh - 84px);
+  /*84 = navbar + tags-view = 70 +34 */
+  height: calc(100vh - 104px);
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -33,7 +33,7 @@ export default {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #eff0f4;
+  background-color: #fff;
 }
 </style>
 
